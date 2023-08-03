@@ -9,7 +9,8 @@ import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined'
 import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
 import SettingsPhoneOutlinedIcon from '@mui/icons-material/SettingsPhoneOutlined'
-import { MenuContext } from '../../context/MenuContext'
+import { MenuContext } from '../../../context/MenuContext'
+import RadioButtonUncheckedSharpIcon from '@mui/icons-material/RadioButtonUncheckedSharp'
 
 const MainLayout = ({ children }: any) => {
 	const { open }: any = useContext(MenuContext)
@@ -32,10 +33,18 @@ const MainLayout = ({ children }: any) => {
 							<h3 className="flex-1">Projects</h3>
 							<KeyboardArrowRightIcon />
 						</li>
-						<li className="flex justify-start items-center hover:bg-pink-200 hover:text-pink-950 rounded-xl p-2">
-							<CheckOutlinedIcon className="mr-2" />
-							<h3 className="flex-1">Singule</h3>
-							<KeyboardArrowRightIcon />
+						<li className="flex flex-col justify-start items-start hover:bg-pink-200 hover:text-pink-950 rounded-xl p-2">
+							<div className="flex justify-center items-center w-full">
+								<CheckOutlinedIcon className="mr-2" />
+								<h3 className="flex-1">Singular</h3>
+								<KeyboardArrowRightIcon />
+							</div>
+							<ul className="ml-8 mt-4">
+								<li className="flex justify-center items-center gap-4">
+									<RadioButtonUncheckedSharpIcon />
+									<Link href="/singular/selectbox">Select Box</Link>
+								</li>
+							</ul>
 						</li>
 						<li className="flex justify-start items-center hover:bg-pink-200 hover:text-pink-950 rounded-xl p-2">
 							<DoneAllOutlinedIcon className="mr-2" />

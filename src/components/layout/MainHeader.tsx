@@ -1,7 +1,8 @@
 'use client'
 import React, { useContext } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
-import { MenuContext } from '../../context/MenuContext'
+import { MenuContext } from '../../../context/MenuContext'
+import UserAreaSelectBox from './UserAreaSelectBox'
 
 const MainHeader = () => {
 	const { toggle }: any = useContext(MenuContext)
@@ -12,7 +13,9 @@ const MainHeader = () => {
 				<div>
 					<MenuIcon className="cursor-pointer lg:hidden" onClick={toggle} />
 				</div>
-				<div>User Area</div>
+				<div>
+					<UserAreaSelectBox />
+				</div>
 			</div>
 		</div>
 	)
