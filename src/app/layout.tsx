@@ -2,6 +2,7 @@ import MainLayout from '@/components/MainLayout'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { MenuContextProvider } from '../../context/MenuContext'
 
 export const metadata: Metadata = {
 	title: "Zy's Dashboard",
@@ -12,7 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body>
-				<MainLayout>{children}</MainLayout>
+				<MenuContextProvider>
+					<MainLayout>{children}</MainLayout>
+				</MenuContextProvider>
 			</body>
 		</html>
 	)
